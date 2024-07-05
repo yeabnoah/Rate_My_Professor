@@ -49,7 +49,7 @@ const Feed = () => {
         {universityData.map((university, index) => (
           <Card
             key={index}
-            className="bg-green-400 rounded-none border-black"
+            className="bg-green-400 rounded-none border-black cursor-pointer"
             onClick={() => {
               router.push(`/${university.id}`);
             }}
