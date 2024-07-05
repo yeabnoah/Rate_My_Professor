@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { cn } from "@/lib/utils";
+import { Space_Grotesk as FontSans } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
-const inter = Inter({ subsets: ["latin"] });
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +21,36 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={cn(
+          " max-h-screen font-sans mx-5 bg-black text-white",
+          fontSans.variable
+        )}
+      >
+        <nav className=" mx-auto max-w-md mb-5">
+          <ul className=" flex gap-5 mt-5 ">
+            <Link
+              href="/"
+              className=" hover:bg-green-500 py-2 px-4 hover:text-black"
+            >
+              Home 🏠
+            </Link>
+            <Link
+              href="/about"
+              className=" hover:bg-green-500 py-2 px-4 hover:text-black"
+            >
+              About 📝
+            </Link>
+            <Link
+              href="/"
+              className=" hover:bg-green-500 py-2 px-4 hover:text-black"
+            >
+              Support 💰
+            </Link>
+          </ul>
+        </nav>
+        {children}
+      </body>
     </html>
   );
 }
