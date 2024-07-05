@@ -16,11 +16,11 @@ export default function Home(props: Props) {
   return (
     <div className=" mx-auto max-w-xl">
       <div className=" flex flex-col justify-center gap-2">
-        <h2 className="text-4xl text-green-400 underline underline-offset-4">
-          About Us
+        <h2 className="text-2xl md:text-3xl text-green-400 underline underline-offset-4">
+          About Us 🖐
         </h2>
 
-        <p className=" text-wrap mt-5">
+        <p className=" text-wrap mt-5 text-sm md:text-base">
           Rate My Professor/Lecturer is committed to providing a transparent and
           trustworthy platform where students can share their honest feedback
           about professors and lecturers. Our mission is to empower students by
@@ -31,10 +31,10 @@ export default function Home(props: Props) {
           Professor/Lecturer is here to support you.
         </p>
 
-        <h2 className=" text-2xl mt-5 text-green-400 underline-offset-4 underline">
+        <h2 className=" text-lg md:text-2xl mt-5 text-green-400 underline-offset-4 underline">
           About The Project 🚀
         </h2>
-        <p className=" text-wrap">
+        <p className=" text-wrap text-sm md:text-base">
           Rate My Professor/Lecturer is born out of a desire to enhance
           transparency and accountability in academia. It aims to foster a
           community where feedback is constructive and valuable, helping both
@@ -42,18 +42,16 @@ export default function Home(props: Props) {
           improvements.
         </p>
 
-        <h2 className=" text-2xl mt-5 text-green-400 underline-offset-4 underline">
+        <h2 className="text-lg md:text-2xl mt-5 text-green-400 underline-offset-4 underline">
           About The Developer 👨‍💻
         </h2>
-        <p className=" text-wrap">
+        <p className=" text-wrap text-sm md:text-base">
           Hi there! I'm yeabsra Ashebir [Tech Nerd], the developer behind Rate
           My Professor/Lecturer. With a passion for creating meaningful
           applications that impact education, I embarked on this project to
           provide a platform where students can openly share their experiences
           and insights about professors and lecturers.
         </p>
-        <UsebleButton content="Do or Die" link="/" className="" />
-        <div>user searched for : {use}</div>
       </div>
     </div>
   );

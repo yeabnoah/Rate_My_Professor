@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { Space_Grotesk as FontSans } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import Navigation from "./components/navigation";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -23,33 +24,17 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          " max-h-screen font-sans mx-5 bg-black text-white",
+          " min-h-screen font-sans mx-5 bg-black text-white",
           fontSans.variable
         )}
       >
-        <nav className=" mx-auto max-w-md mb-5">
-          <ul className=" flex gap-5 mt-5 ">
-            <Link
-              href="/"
-              className=" hover:bg-green-500 py-2 px-4 hover:text-black"
-            >
-              Home 🏠
-            </Link>
-            <Link
-              href="/about"
-              className=" hover:bg-green-500 py-2 px-4 hover:text-black"
-            >
-              About 📝
-            </Link>
-            <Link
-              href="/"
-              className=" hover:bg-green-500 py-2 px-4 hover:text-black"
-            >
-              Support 💰
-            </Link>
-          </ul>
-        </nav>
+        <Navigation />
         {children}
+        <div className=" mt-8 bottom-0">
+          <h3 className=" text-green-500 font-bold text-sm mb-2 text-center bottom-0">
+            🇪🇹 2024 Powerd by TechNerd 👨‍💻
+          </h3>
+        </div>
       </body>
     </html>
   );

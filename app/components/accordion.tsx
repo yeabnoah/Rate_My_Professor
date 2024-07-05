@@ -36,11 +36,14 @@ const AccordionComponent = () => {
   ];
   return (
     <div className=" mt-5">
+      <h2 className=" text-lg md:text-2xl mt-5 text-green-400 underline-offset-4 underline">
+        FAQS 🤔
+      </h2>
       {faqData.map((each, idx) => {
         return (
           <Accordion key={idx} type="single" collapsible className="">
             <AccordionItem value="item-1">
-              <AccordionTrigger className=" hover:no-underline hover:text-green-400">
+              <AccordionTrigger className=" text-start hover:no-underline hover:text-green-400">
                 {each.question}
               </AccordionTrigger>
               <AccordionContent className="">{each.answer}</AccordionContent>

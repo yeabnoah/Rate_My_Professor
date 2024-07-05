@@ -9,6 +9,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Features from "./components/features";
+import AccordionComponent from "./components/accordion";
 
 interface Props {
   searchParams: {
@@ -23,20 +24,22 @@ export default function Home(props: Props) {
   return (
     <div className="max-w-xl mx-auto mt-5">
       <div className=" flex flex-col justify-center gap-2">
-        <h2 className=" text-4xl text-green-400 underline underline-offset-4">
-          Rate my Professor
+        <h2 className=" text-2xl md:text-4xl text-green-400 underline underline-offset-4">
+          Rate my Professor 👨‍🏫
         </h2>
-        <p className=" text-wrap">
+        <p className=" text-wrap text-sm md:text-base">
           Rate My Professor/Lecturer is your trusted platform to share and
           discover honest feedback about professors and lecturers. Whether
           you're a student looking for insights or an educator seeking
           constructive feedback, we're here to help you make informed decisions.
         </p>
 
-        <h2 className=" text-2xl mt-5 text-green-400 underline-offset-4 underline">
-          Key Features
+        <UsebleButton content="Get Started 🚀" link="/feed" className="mt-5" />
+
+        <h2 className=" text-lg md:text-2xl mt-5 text-green-400 underline-offset-4 underline">
+          Key Features 🎁
         </h2>
-        <p className=" text-wrap">
+        <p className=" text-wrap text-sm md:text-base">
           Rate My Professor/Lecturer is your trusted platform to share and
           discover honest feedback about professors and lecturers. Whether
           you're a student looking for insights or an educator seeking
@@ -44,9 +47,8 @@ export default function Home(props: Props) {
         </p>
 
         <Features />
+        <AccordionComponent />
       </div>
-
-      <UsebleButton content="Get Started" link="/feed" className="mt-5 " />
     </div>
   );
 }
