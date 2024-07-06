@@ -65,7 +65,7 @@ const TeacherDetail = ({ params: { teacher } }: Props) => {
 
         <AddReviewBtn />
 
-        <div>
+        {/* <div>
           import Link from "next/link"
           <Card className="mx-auto max-w-sm">
             <CardHeader>
@@ -77,7 +77,7 @@ const TeacherDetail = ({ params: { teacher } }: Props) => {
             <CardContent>
               <div className="grid gap-4">
                 <div className="grid gap-2">
-                  <Label htmlFor="email">Email</Label>
+                  <Label>Email</Label>
                   <Input
                     id="email"
                     type="email"
@@ -87,7 +87,7 @@ const TeacherDetail = ({ params: { teacher } }: Props) => {
                 </div>
                 <div className="grid gap-2">
                   <div className="flex items-center">
-                    <Label htmlFor="password">Password</Label>
+                    <Label>Password</Label>
                     <Link
                       href="#"
                       className="ml-auto inline-block text-sm underline"
@@ -112,7 +112,7 @@ const TeacherDetail = ({ params: { teacher } }: Props) => {
               </div>
             </CardContent>
           </Card>
-        </div>
+        </div> */}
       </div>
     </div>
   );
